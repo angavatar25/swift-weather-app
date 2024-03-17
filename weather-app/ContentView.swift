@@ -27,10 +27,14 @@ func singleDigitFormatted(num: Double) -> String {
 }
 
 struct ContentView: View {
-    let grayColour = Color(red: 253/255.0, green: 252/255.0, blue: 251/255.0);
+    @StateObject var darkModeState = DarkModeToggle()
+
     var weatherManager = WeatherManager()
 
     @State var weather: ResponseBody?
+    
+    let grayColour = Color(red: 253/255.0, green: 252/255.0, blue: 251/255.0)
+    let blackColour = Color(red: 47/255.0, green: 53/255.0, blue: 66/255.0)
     
     let currentCity: String
     
@@ -55,8 +59,6 @@ struct ContentView: View {
                     }
             }
         }
-        .background(grayColour)
-        .preferredColorScheme(.light)
     }
 }
 

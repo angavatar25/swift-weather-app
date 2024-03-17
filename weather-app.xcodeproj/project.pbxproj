@@ -14,6 +14,7 @@
 		D2494FCF2BA5FF8A0033C825 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2494FCE2BA5FF8A0033C825 /* WeatherView.swift */; };
 		D2494FD22BA600520033C825 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2494FD12BA600520033C825 /* ModelData.swift */; };
 		D2494FD42BA600CB0033C825 /* weatherData.json in Resources */ = {isa = PBXBuildFile; fileRef = D2494FD32BA600CB0033C825 /* weatherData.json */; };
+		D2494FDB2BA6B7FD0033C825 /* DarkModeToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2494FDA2BA6B7FD0033C825 /* DarkModeToggle.swift */; };
 		D27A5DE22BA3F18B00DED8B8 /* weather_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27A5DE12BA3F18B00DED8B8 /* weather_appApp.swift */; };
 		D27A5DE42BA3F18B00DED8B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27A5DE32BA3F18B00DED8B8 /* ContentView.swift */; };
 		D27A5DE62BA3F18D00DED8B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D27A5DE52BA3F18D00DED8B8 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		D2494FCE2BA5FF8A0033C825 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		D2494FD12BA600520033C825 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		D2494FD32BA600CB0033C825 /* weatherData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weatherData.json; sourceTree = "<group>"; };
+		D2494FDA2BA6B7FD0033C825 /* DarkModeToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeToggle.swift; sourceTree = "<group>"; };
 		D27A5DDE2BA3F18B00DED8B8 /* weather-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weather-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27A5DE12BA3F18B00DED8B8 /* weather_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weather_appApp.swift; sourceTree = "<group>"; };
 		D27A5DE32BA3F18B00DED8B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 			path = PreviewContent;
 			sourceTree = "<group>";
 		};
+		D2494FD92BA6B7ED0033C825 /* GlobalState */ = {
+			isa = PBXGroup;
+			children = (
+				D2494FDA2BA6B7FD0033C825 /* DarkModeToggle.swift */,
+			);
+			path = GlobalState;
+			sourceTree = "<group>";
+		};
 		D27A5DD52BA3F18B00DED8B8 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +153,7 @@
 		D27A5DE02BA3F18B00DED8B8 /* weather-app */ = {
 			isa = PBXGroup;
 			children = (
+				D2494FD92BA6B7ED0033C825 /* GlobalState */,
 				D2494FD02BA6003C0033C825 /* PreviewContent */,
 				D205E77C2BA5A9FC00F528C3 /* Views */,
 				D205E7792BA5721100F528C3 /* Model */,
@@ -316,6 +327,7 @@
 				D205E77B2BA5721D00F528C3 /* WeatherModel.swift in Sources */,
 				D2494FCD2BA5EBB50033C825 /* CityListView.swift in Sources */,
 				D205E77E2BA5AA0A00F528C3 /* LoadingView.swift in Sources */,
+				D2494FDB2BA6B7FD0033C825 /* DarkModeToggle.swift in Sources */,
 				D2494FD22BA600520033C825 /* ModelData.swift in Sources */,
 				D2494FCF2BA5FF8A0033C825 /* WeatherView.swift in Sources */,
 				D27A5DE22BA3F18B00DED8B8 /* weather_appApp.swift in Sources */,

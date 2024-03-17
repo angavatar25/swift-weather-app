@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct WeatherView: View {
+    @StateObject var darkModeState = DarkModeToggle()
+    
+    @Environment(\.colorScheme) var colorScheme
+    
+    let blackColour = Color(red: 47/255.0, green: 53/255.0, blue: 66/255.0)
+    let grayColour = Color(red: 253/255.0, green: 252/255.0, blue: 251/255.0)
+
     let weather: ResponseBody
     
     init(weather: ResponseBody) {
@@ -32,13 +39,10 @@ struct WeatherView: View {
             }
             Spacer()
             VStack(spacing: 10) {
-                Text("\(singleDigitFormatted(num: weather.main.feelsLike)) ° C")
+                Text("\(singleDigitFormatted(num: weather.main.feelsLike))°C")
                     .font(.system(size: 50))
                 VStack {
                     Text("Good Morning")
-                        .textCase(.uppercase)
-                        .foregroundColor(.gray)
-                    Text("Wasim")
                         .textCase(.uppercase)
                         .foregroundColor(.gray)
                 }
@@ -79,7 +83,7 @@ struct WeatherView: View {
                         Text("Temperature")
                             .textCase(.uppercase)
                             .font(.system(size: 10))
-                        Text("\(singleDigitFormatted(num: weather.main.feelsLike))°")
+                        Text("\(singleDigitFormatted(num: weather.main.feelsLike))°C")
                             .font(.system(size: 20))
                     }
                 }
@@ -88,9 +92,13 @@ struct WeatherView: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
+        .preferredColorScheme(.dark)
+        .foregroundColor(colorScheme == .dark ? .white : .black)
+        .background(colorScheme == .dark ? blackColour : grayColour)
     }
 }
 
 #Preview {
     WeatherView(weather: previewWeather)
+        .preferredColorScheme(.dark)
 }

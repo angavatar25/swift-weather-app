@@ -10,9 +10,9 @@ import Foundation
 
 class WeatherManager {
     func getCurrentWeather(city: String) async throws -> ResponseBody {
-        let openWeatherKey = ProcessInfo.processInfo.environment["OPENWEATHER_API_KEY"]
+        let openWeatherKey: String = String(ProcessInfo.processInfo.environment["OPENWEATHER_API_KEY"] ?? "")
 
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(String(describing: openWeatherKey))0&units=metric") else { fatalError("Missing URL") }
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(openWeatherKey)&units=metric") else { fatalError("Missing URL") }
         
         let urlRequest = URLRequest(url: url)
         
